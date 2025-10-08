@@ -9,15 +9,17 @@
 }
 
 .page-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 4.5rem); /* Aumentado para maior impacto */
+  font-weight: 600; /* Peso mais refinado */
+  letter-spacing: -0.02em; /* Kerning mais apertado */
   color: var(--color-text);
 }
 
 .page-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Aumentado */
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.8; /* Mais espaçamento */
+  font-family: var(--font-accent); /* Fonte alternativa */
 }
 
 /* Story Card */
@@ -31,18 +33,21 @@
 
 .story-card h2 {
   color: var(--color-text);
-  font-size: 2rem;
+  font-size: 2.25rem; /* Aumentado */
+  font-weight: 600; /* Peso refinado */
+  letter-spacing: -0.01em; /* Kerning */
 }
 
 .story-card .lead {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Aumentado */
   color: var(--color-text);
-  line-height: 1.8;
+  line-height: 1.9; /* Mais espaçamento */
 }
 
 .story-card p {
   color: var(--color-text-secondary);
-  line-height: 1.8;
+  line-height: 1.8; /* Mais espaçamento */
+  font-size: 1.1rem; /* Aumentado */
 }
 
 /* Character Cards */
@@ -75,14 +80,15 @@
 }
 
 .character-name {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 1.85rem; /* Aumentado */
+  font-weight: 600; /* Peso refinado */
+  letter-spacing: -0.01em; /* Kerning */
   color: var(--color-text);
   margin-bottom: 0.5rem;
 }
 
 .character-role {
-  font-size: 1rem;
+  font-size: 1.05rem; /* Aumentado */
   color: var(--color-primary);
   font-weight: 600;
   margin-bottom: 1rem;
@@ -90,17 +96,98 @@
 
 .character-description {
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.8; /* Mais espaçamento */
+  font-size: 1.05rem; /* Aumentado */
   margin-bottom: 1.5rem;
+  text-align: left; /* Alinhamento à esquerda */
 }
 
 .character-traits {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center; /* Centralizado */
 }
 
 .trait-badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Novos estilos para página Sobre o Projeto */
+/* Team Cards */
+.team-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  height: 100%;
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.team-avatar {
+  width: 100px;
+  height: 100px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--color-primary);
+  font-size: 4rem;
+  transition: all var(--transition-base);
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.team-bio {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.team-expertise {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.expertise-badge {
   display: inline-block;
   padding: 0.375rem 0.75rem;
   background-color: var(--color-primary-light);

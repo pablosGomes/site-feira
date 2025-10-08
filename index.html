@@ -3,43 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Uma experiência literária transformadora que convida você a explorar os mistérios da psique humana e descobrir quem você realmente é.">
+    
+    <!-- SEO aprimorado com meta tags completas -->
+    <meta name="description" content="Filhos do Quarto: Uma jornada literária transformadora de autoconhecimento. Explore os mistérios da psique humana através de uma narrativa envolvente baseada em psicologia junguiana.">
+    <meta name="keywords" content="autoconhecimento, psicologia junguiana, desenvolvimento pessoal, romance psicológico, transformação pessoal, jornada interior">
+    <meta name="author" content="Filhos do Quarto">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://filhosdoquarto.com/">
+    <meta property="og:title" content="Filhos do Quarto - Uma Jornada de Autoconhecimento">
+    <meta property="og:description" content="Uma experiência literária transformadora que convida você a explorar os mistérios da psique humana e descobrir quem você realmente é.">
+    <meta property="og:image" content="/placeholder.svg?height=630&width=1200">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://filhosdoquarto.com/">
+    <meta property="twitter:title" content="Filhos do Quarto - Uma Jornada de Autoconhecimento">
+    <meta property="twitter:description" content="Uma experiência literária transformadora que convida você a explorar os mistérios da psique humana.">
+    <meta property="twitter:image" content="/placeholder.svg?height=630&width=1200">
+    
     <title>Filhos do Quarto - Uma Jornada de Autoconhecimento</title>
     
-     Bootstrap 5 CSS 
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-     Google Fonts 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-     Bootstrap Icons 
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-     Custom CSS 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body data-theme="light">
     
-     Navigation 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
+    <!-- Navegação com acessibilidade aprimorada -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav" role="navigation" aria-label="Navegação principal">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <div class="brand-icon">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Filhos do Quarto - Página inicial">
+                <div class="brand-icon" aria-hidden="true">
                     <i class="bi bi-book"></i>
                 </div>
                 <span class="ms-2">Filhos do Quarto</span>
             </a>
             
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">O Chamado</a>
+                        <a class="nav-link active" href="index.html" aria-current="page">O Chamado</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="o-quarto.html">O Quarto</a>
@@ -54,8 +73,8 @@
                         <a class="nav-link" href="conexao.html">Conexão</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <button class="btn btn-icon" id="themeToggle" aria-label="Alternar modo escuro">
-                            <i class="bi bi-moon-fill"></i>
+                        <button class="btn btn-icon" id="themeToggle" aria-label="Alternar entre modo claro e escuro" title="Alternar tema">
+                            <i class="bi bi-moon-fill" aria-hidden="true"></i>
                         </button>
                     </li>
                 </ul>
@@ -63,13 +82,13 @@
         </div>
     </nav>
 
-     Hero Section 
+    <!-- Hero Section com conteúdo mais profundo e poético -->
     <section class="hero-section" id="hero">
         <div class="container">
             <div class="row align-items-center min-vh-100 py-5">
                 <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                    <div class="hero-icon mb-4">
-                        <i class="bi bi-book"></i>
+                    <div class="hero-icon mb-4" aria-hidden="true">
+                        <i class="bi bi-door-open"></i>
                     </div>
                     
                     <h1 class="hero-title mb-4">
@@ -77,29 +96,31 @@
                     </h1>
                     
                     <p class="hero-subtitle mb-4">
-                        Uma experiência literária transformadora que convida você a explorar os mistérios da psique humana e descobrir quem você realmente é.
+                        E se o quarto em que você sempre viveu não fosse uma prisão, mas um portal? Uma jornada literária que transforma a solidão em autoconhecimento e o medo em sabedoria.
                     </p>
                     
                     <ul class="feature-list mb-5">
                         <li>
-                            <i class="bi bi-circle-fill"></i>
-                            <span>Romance psicológico de autoconhecimento</span>
+                            <i class="bi bi-circle-fill" aria-hidden="true"></i>
+                            <span>Romance psicológico que dialoga com Jung, Campbell e a jornada do herói interior</span>
                         </li>
                         <li>
-                            <i class="bi bi-circle-fill"></i>
-                            <span>Baseado em psicologia junguiana e desenvolvimento pessoal</span>
+                            <i class="bi bi-circle-fill" aria-hidden="true"></i>
+                            <span>Quatro personagens, quatro estágios, uma única verdade: você</span>
                         </li>
                         <li>
-                            <i class="bi bi-circle-fill"></i>
-                            <span>Experiência interativa e transformadora</span>
+                            <i class="bi bi-circle-fill" aria-hidden="true"></i>
+                            <span>Experiência interativa que convida à reflexão e transformação pessoal</span>
                         </li>
                     </ul>
                     
                     <div class="hero-cta">
                         <a href="o-quarto.html" class="btn btn-primary btn-lg me-3 mb-3">
+                            <i class="bi bi-book-half me-2"></i>
                             Descobrir a Obra
                         </a>
                         <a href="descubra-se.html" class="btn btn-outline-primary btn-lg mb-3">
+                            <i class="bi bi-compass me-2"></i>
                             Fazer Quiz
                         </a>
                     </div>
@@ -107,11 +128,11 @@
                 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="quote-card">
-                        <div class="quote-icon">
+                        <div class="quote-icon" aria-hidden="true">
                             <i class="bi bi-quote"></i>
                         </div>
                         <blockquote class="quote-text">
-                            "No momento em que olhamos para dentro de nós mesmos, descobrimos que o quarto nunca foi apenas um espaço físico, mas um portal para nossa essência mais profunda."
+                            "Há um quarto dentro de cada um de nós. Alguns passam a vida tentando escapar dele. Outros descobrem que a chave sempre esteve em suas mãos — e que a verdadeira liberdade começa quando paramos de fugir e começamos a olhar."
                         </blockquote>
                         <cite class="quote-author">— Filhos do Quarto</cite>
                     </div>
@@ -119,57 +140,93 @@
             </div>
         </div>
         
-         Scroll Indicator 
-        <div class="scroll-indicator">
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
             <div class="scroll-line"></div>
         </div>
     </section>
 
-     About Section 
-    <section class="about-section py-5" id="about">
+    <!-- Nova seção sobre o livro com mais profundidade -->
+    <section class="about-book-section py-5" style="background-color: var(--color-bg-secondary);">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="text-center mb-5" data-aos="fade-up">
-                        <h2 class="section-title mb-4">Uma Jornada Interior</h2>
+                        <h2 class="section-title mb-4">Sobre o Livro</h2>
                         <p class="section-subtitle">
-                            Filhos do Quarto é mais do que um livro — é um convite para uma jornada de autodescoberta que transforma a maneira como você se vê e compreende o mundo ao seu redor.
+                            Uma obra que transcende a ficção para se tornar um espelho da alma humana
                         </p>
+                    </div>
+                    
+                    <div class="row g-5 align-items-center mb-5">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <h3 class="mb-4" style="font-size: 2rem; font-weight: 600;">A Gênese da Obra</h3>
+                            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                                <em>Filhos do Quarto</em> nasceu de uma pergunta simples, mas profunda: <strong>o que acontece quando somos forçados a confrontar quem realmente somos?</strong> Em uma sociedade que nos ensina a fugir de nós mesmos através de distrações infinitas, este livro propõe o oposto — um mergulho radical na própria psique.
+                            </p>
+                            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                                Inspirado nas teorias de Carl Jung sobre individuação, na jornada do herói de Joseph Campbell, e nas filosofias orientais sobre meditação e autoconhecimento, a narrativa entrelaça ficção e psicologia de forma única.
+                            </p>
+                            <p style="font-size: 1.1rem; line-height: 1.8;">
+                                O "quarto" funciona como metáfora central — um espaço liminal entre o consciente e o inconsciente, onde os personagens (e os leitores) são convidados a descer às profundezas de si mesmos.
+                            </p>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: 1.5rem; padding: 3rem; color: white; box-shadow: 0 8px 32px rgba(30, 58, 138, 0.3);">
+                                <h4 style="font-size: 1.75rem; margin-bottom: 2rem; font-weight: 600;">Temas Centrais</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                                        <i class="bi bi-check-circle-fill" style="font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0; margin-top: 0.25rem;"></i>
+                                        <span style="font-size: 1.1rem; line-height: 1.7;"><strong>Individuação:</strong> O processo de se tornar quem você realmente é</span>
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                                        <i class="bi bi-check-circle-fill" style="font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0; margin-top: 0.25rem;"></i>
+                                        <span style="font-size: 1.1rem; line-height: 1.7;"><strong>Integração das Sombras:</strong> Aceitar os aspectos negados de si mesmo</span>
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                                        <i class="bi bi-check-circle-fill" style="font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0; margin-top: 0.25rem;"></i>
+                                        <span style="font-size: 1.1rem; line-height: 1.7;"><strong>Morte e Renascimento:</strong> A transformação através da crise</span>
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start;">
+                                        <i class="bi bi-check-circle-fill" style="font-size: 1.5rem; margin-right: 1rem; flex-shrink: 0; margin-top: 0.25rem;"></i>
+                                        <span style="font-size: 1.1rem; line-height: 1.7;"><strong>Autenticidade:</strong> Viver de acordo com sua verdade interior</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="row g-4">
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="feature-card text-center">
-                                <div class="feature-icon">
-                                    <i class="bi bi-compass"></i>
+                            <div style="background: white; border-radius: 1rem; padding: 2rem; height: 100%; border: 1px solid var(--color-border); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                                <div style="width: 60px; height: 60px; background: var(--color-primary-light); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                    <i class="bi bi-book" style="font-size: 1.75rem; color: var(--color-primary);"></i>
                                 </div>
-                                <h3 class="feature-title">Descoberta</h3>
-                                <p class="feature-description">
-                                    Explore os cantos mais profundos da sua psique através de uma narrativa envolvente
+                                <h4 style="font-size: 1.35rem; font-weight: 600; margin-bottom: 1rem;">Estrutura Narrativa</h4>
+                                <p style="color: var(--color-text-secondary); line-height: 1.7; font-size: 1.05rem;">
+                                    Dividido em quatro atos que espelham as fases da jornada do herói e os estágios do autoconhecimento
                                 </p>
                             </div>
                         </div>
-                        
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="feature-card text-center">
-                                <div class="feature-icon">
-                                    <i class="bi bi-heart"></i>
+                            <div style="background: white; border-radius: 1rem; padding: 2rem; height: 100%; border: 1px solid var(--color-border); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                                <div style="width: 60px; height: 60px; background: var(--color-primary-light); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                    <i class="bi bi-people" style="font-size: 1.75rem; color: var(--color-primary);"></i>
                                 </div>
-                                <h3 class="feature-title">Transformação</h3>
-                                <p class="feature-description">
-                                    Permita-se ser transformado pela jornada dos personagens e suas revelações
+                                <h4 style="font-size: 1.35rem; font-weight: 600; margin-bottom: 1rem;">Personagens Arquetípicos</h4>
+                                <p style="color: var(--color-text-secondary); line-height: 1.7; font-size: 1.05rem;">
+                                    Cada personagem representa um arquétipo junguiano e uma fase específica do desenvolvimento pessoal
                                 </p>
                             </div>
                         </div>
-                        
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="feature-card text-center">
-                                <div class="feature-icon">
-                                    <i class="bi bi-lightbulb"></i>
+                            <div style="background: white; border-radius: 1rem; padding: 2rem; height: 100%; border: 1px solid var(--color-border); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                                <div style="width: 60px; height: 60px; background: var(--color-primary-light); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                    <i class="bi bi-lightbulb" style="font-size: 1.75rem; color: var(--color-primary);"></i>
                                 </div>
-                                <h3 class="feature-title">Iluminação</h3>
-                                <p class="feature-description">
-                                    Alcance novos níveis de consciência e compreensão sobre si mesmo
+                                <h4 style="font-size: 1.35rem; font-weight: 600; margin-bottom: 1rem;">Simbolismo Profundo</h4>
+                                <p style="color: var(--color-text-secondary); line-height: 1.7; font-size: 1.05rem;">
+                                    Repleto de metáforas e símbolos que convidam à múltiplas leituras e interpretações pessoais
                                 </p>
                             </div>
                         </div>
@@ -179,14 +236,105 @@
         </div>
     </section>
 
-     CTA Section 
+    <!-- About Section com reflexões mais profundas -->
+    <section class="about-section py-5" id="about">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <h2 class="section-title mb-4">Uma Jornada Interior</h2>
+                        <p class="section-subtitle">
+                            Filhos do Quarto não é apenas uma história — é um espelho. Cada personagem reflete uma fase da jornada humana rumo ao autoconhecimento. Cada página é um convite para você se reconhecer, se questionar e, finalmente, se transformar.
+                        </p>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-card text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-sunrise"></i>
+                                </div>
+                                <h3 class="feature-title">O Despertar</h3>
+                                <p class="feature-description">
+                                    O momento em que você percebe que há mais em você do que sempre acreditou. A primeira pergunta que muda tudo: "Quem sou eu, realmente?"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-card text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-lightning"></i>
+                                </div>
+                                <h3 class="feature-title">O Confronto</h3>
+                                <p class="feature-description">
+                                    Enfrentar suas sombras, reconhecer suas contradições e aceitar que você é humano, imperfeito e em constante evolução
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-card text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-stars"></i>
+                                </div>
+                                <h3 class="feature-title">O Renascimento</h3>
+                                <p class="feature-description">
+                                    Quando você compreende que o quarto nunca foi uma prisão — era o útero de uma nova versão de si mesmo
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova seção: Por que esta jornada importa -->
+    <section class="why-section py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="section-title mb-4">Por que esta jornada importa?</h2>
+                    <p class="mb-4">
+                        Vivemos em um mundo que nos ensina a olhar para fora — para conquistas, aprovações, máscaras sociais. Mas a verdadeira transformação acontece quando temos a coragem de olhar para dentro.
+                    </p>
+                    <p class="mb-4">
+                        <strong>Filhos do Quarto</strong> é um convite para essa jornada interior. Através de quatro personagens profundamente humanos, você descobrirá que:
+                    </p>
+                    <ul class="insight-list">
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Suas feridas podem se tornar sua maior força</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Aceitar suas sombras é o caminho para a luz</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>O autoconhecimento não é um destino, mas uma jornada contínua</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Você não está sozinho nesta busca</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="insight-card">
+                        <div class="insight-icon mb-3">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h4 class="mb-3">Reflexão para você</h4>
+                        <p class="insight-question">
+                            "Se você pudesse entrar em um quarto que contém todas as suas memórias, medos, sonhos e verdades não ditas — você teria coragem de abrir a porta?"
+                        </p>
+                        <p class="insight-answer">
+                            Esta é a pergunta que <em>Filhos do Quarto</em> faz. E a resposta pode mudar sua vida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center" data-aos="zoom-in">
                     <h2 class="cta-title mb-4">Pronto para Começar sua Jornada?</h2>
                     <p class="cta-text mb-5">
-                        Descubra qual personagem representa seu momento atual e inicie sua transformação pessoal
+                        Descubra em qual estágio da jornada você se encontra e receba orientações personalizadas para sua transformação pessoal
                     </p>
                     <a href="descubra-se.html" class="btn btn-light btn-lg">
                         Fazer o Quiz Agora
@@ -197,7 +345,7 @@
         </div>
     </section>
 
-     Footer 
+    <!-- Footer -->
     <footer class="footer py-5">
         <div class="container">
             <div class="row">
@@ -219,6 +367,7 @@
                         <li><a href="a-jornada.html">A Jornada</a></li>
                         <li><a href="descubra-se.html">Descubra-se</a></li>
                         <li><a href="conexao.html">Conexão</a></li>
+                        <li><a href="sobre-projeto.html">Sobre o Projeto</a></li>
                     </ul>
                 </div>
                 
@@ -253,14 +402,14 @@
         </div>
     </footer>
 
-     Bootstrap JS 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-     AOS Animation Library 
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-     Custom JS 
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>

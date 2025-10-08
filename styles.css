@@ -3,22 +3,23 @@
    =================================== */
 
 :root {
-  /* Light Theme Colors */
-  --color-primary: #00a8e8;
-  --color-primary-dark: #0088bb;
-  --color-primary-light: #e6f7ff;
-  --color-secondary: #1a1a2e;
-  --color-accent: #ff6b6b;
+  /* Light Theme Colors - Tons de azul mais escuros e profundos */
+  --color-primary: #1e3a8a; /* Azul escuro profundo */
+  --color-primary-dark: #1e293b; /* Azul quase preto */
+  --color-primary-light: #dbeafe; /* Azul claro suave */
+  --color-secondary: #0f172a; /* Azul escuro secundário */
+  --color-accent: #3b82f6; /* Azul médio para acentos */
 
   --color-bg: #ffffff;
-  --color-bg-secondary: #f8f9fa;
-  --color-text: #1a1a2e;
-  --color-text-secondary: #6c757d;
-  --color-border: #e9ecef;
+  --color-bg-secondary: #f8fafc;
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+  --color-border: #e2e8f0;
 
-  /* Typography */
-  --font-primary: "Inter", sans-serif;
-  --font-display: "Playfair Display", serif;
+  /* Typography - Fontes mais elegantes para tema sério */
+  --font-primary: "Crimson Text", "Georgia", serif; /* Serif elegante para corpo */
+  --font-display: "Cormorant Garamond", "Playfair Display", serif; /* Serif dramática para títulos */
+  --font-accent: "Lora", serif; /* Serif alternativa */
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -46,12 +47,12 @@
 
 /* Dark Theme Colors */
 [data-theme="dark"] {
-  --color-bg: #0f1419;
-  --color-bg-secondary: #1a1f2e;
-  --color-text: #e8e8e8;
-  --color-text-secondary: #a0a0a0;
-  --color-border: #2a2f3e;
-  --color-primary-light: rgba(0, 168, 232, 0.1);
+  --color-bg: #020617;
+  --color-bg-secondary: #0f172a;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-border: #1e293b;
+  --color-primary-light: rgba(30, 58, 138, 0.2);
 }
 
 /* ===================================
@@ -70,8 +71,8 @@ html {
 
 body {
   font-family: var(--font-primary);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px; /* Aumentado para melhor legibilidade */
+  line-height: 1.8; /* Aumentado para texto mais respirável */
   color: var(--color-text);
   background-color: var(--color-bg);
   transition: background-color var(--transition-base), color var(--transition-base);
@@ -85,8 +86,9 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 600; /* Peso mais refinado */
+  line-height: 1.3; /* Melhor espaçamento */
+  letter-spacing: -0.02em; /* Kerning mais apertado para elegância */
   color: var(--color-text);
 }
 
@@ -94,6 +96,16 @@ a {
   text-decoration: none;
   color: inherit;
   transition: color var(--transition-fast);
+}
+
+/* Melhor foco para acessibilidade */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 img {
@@ -107,7 +119,7 @@ img {
    =================================== */
 
 .navbar {
-  padding: 1rem 0;
+  padding: 1.25rem 0; /* Mais espaço vertical */
   transition: all var(--transition-base);
   background-color: var(--color-bg) !important;
 }
@@ -118,8 +130,9 @@ img {
 
 .navbar-brand {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.75rem; /* Maior e mais imponente */
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--color-text);
   transition: color var(--transition-fast);
 }
@@ -138,10 +151,18 @@ img {
   justify-content: center;
   color: white;
   font-size: 1.25rem;
+  /* Micro-interação no ícone */
+  transition: transform var(--transition-base);
+}
+
+.navbar-brand:hover .brand-icon {
+  transform: rotate(10deg) scale(1.1);
 }
 
 .nav-link {
   font-weight: 500;
+  font-size: 1.05rem; /* Ligeiramente maior */
+  letter-spacing: 0.01em;
   color: var(--color-text-secondary);
   padding: 0.5rem 1rem !important;
   position: relative;
@@ -174,12 +195,14 @@ img {
   justify-content: center;
   color: var(--color-text);
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
 .btn-icon:hover {
   background-color: var(--color-primary-light);
   border-color: var(--color-primary);
   color: var(--color-primary);
+  transform: scale(1.1);
 }
 
 /* ===================================
@@ -202,24 +225,52 @@ img {
   justify-content: center;
   color: var(--color-primary);
   font-size: 1.75rem;
+  /* Animação sutil no ícone */
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: clamp(3rem, 6vw, 5rem); /* Maior e mais dramático */
+  font-weight: 600;
+  margin-bottom: 2rem;
   line-height: 1.1;
+  letter-spacing: -0.03em; /* Kerning mais apertado */
 }
 
 .hero-title .text-primary {
   color: var(--color-primary);
+  /* Efeito de destaque no texto */
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .text-primary::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
+  z-index: -1;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Maior para melhor legibilidade */
   color: var(--color-text-secondary);
-  line-height: 1.6;
-  max-width: 600px;
+  line-height: 1.9; /* Mais espaçamento */
+  max-width: 650px;
+  font-family: var(--font-accent); /* Fonte alternativa para contraste */
 }
 
 .feature-list {
@@ -229,16 +280,42 @@ img {
 
 .feature-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1.1rem; /* Maior */
   color: var(--color-text-secondary);
+  /* Transição suave ao aparecer */
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.feature-list li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.feature-list li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.feature-list li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
 
 .feature-list i {
   color: var(--color-primary);
   font-size: 0.5rem;
   margin-right: 1rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
 }
 
 .hero-cta {
@@ -249,12 +326,32 @@ img {
 
 /* Quote Card */
 .quote-card {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, rgba(0, 168, 232, 0.05) 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, rgba(30, 58, 138, 0.05) 100%); /* Gradiente com nova cor */
   border-radius: var(--radius-lg);
   padding: 3rem;
   position: relative;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  /* Borda sutil animada */
+  border: 1px solid transparent;
+}
+
+.quote-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 2px;
+  background: linear-gradient(135deg, var(--color-primary), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.quote-card:hover::before {
+  opacity: 1;
 }
 
 .quote-card:hover {
@@ -271,11 +368,11 @@ img {
 
 .quote-text {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.4rem; /* Maior e mais impactante */
   font-style: italic;
-  line-height: 1.8;
+  line-height: 1.9; /* Mais espaçamento */
+  font-weight: 400;
   color: var(--color-text);
-  margin-bottom: 1.5rem;
 }
 
 .quote-author {
@@ -328,17 +425,38 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho ao passar o mouse */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 168, 232, 0.3);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 168, 232, 0.4);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
   color: white;
 }
 
@@ -375,17 +493,19 @@ img {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem); /* Maior */
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--color-text);
   margin-bottom: 1rem;
 }
 
 .section-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Maior */
   color: var(--color-text-secondary);
-  line-height: 1.8;
-  max-width: 800px;
+  line-height: 1.9; /* Mais espaçamento */
+  max-width: 850px;
+  font-family: var(--font-accent);
   margin: 0 auto;
 }
 
@@ -420,19 +540,78 @@ img {
 }
 
 .feature-card:hover .feature-icon {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .feature-title {
-  font-size: 1.5rem;
+  font-size: 1.65rem; /* Maior */
   font-weight: 600;
-  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
   color: var(--color-text);
+  margin-bottom: 1rem;
 }
 
 .feature-description {
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.8; /* Mais espaçamento */
+  font-size: 1.05rem; /* Maior */
+}
+
+/* Nova seção: Why Section */
+.why-section {
+  background-color: var(--color-bg-secondary);
+}
+
+.insight-list {
+  list-style: none;
+  padding: 0;
+}
+
+.insight-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.15rem; /* Maior */
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.insight-card {
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.insight-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.insight-question {
+  font-family: var(--font-display);
+  font-size: 1.35rem; /* Maior */
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.9; /* Mais espaçamento */
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-primary);
+}
+
+.insight-answer {
+  color: var(--color-text-secondary);
+  line-height: 1.8; /* Mais espaçamento */
+  font-size: 1.05rem; /* Maior */
 }
 
 /* ===================================
@@ -442,18 +621,45 @@ img {
 .cta-section {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Padrão de fundo animado */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 .cta-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem); /* Maior */
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: white;
 }
 
 .cta-text {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Maior */
+  line-height: 1.8; /* Mais espaçamento */
   color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
 }
 
 /* ===================================
@@ -467,8 +673,9 @@ img {
 
 .footer-brand {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.65rem; /* Maior */
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--color-text);
   display: flex;
   align-items: center;
@@ -476,7 +683,8 @@ img {
 
 .footer-text {
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.8; /* Mais espaçamento */
+  font-size: 1.05rem; /* Maior */
 }
 
 .footer-title {
@@ -502,6 +710,7 @@ img {
 
 .footer-links a:hover {
   color: var(--color-primary);
+  padding-left: 5px;
 }
 
 .social-links {
@@ -526,7 +735,7 @@ img {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: white;
-  transform: translateY(-3px);
+  transform: translateY(-3px) rotate(5deg);
 }
 
 .footer-divider {
@@ -545,11 +754,11 @@ img {
 
 @media (max-width: 991px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.75rem; /* Ajustado */
   }
 
   .hero-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.2rem; /* Ajustado */
   }
 
   .quote-card {
@@ -557,7 +766,7 @@ img {
   }
 
   .quote-text {
-    font-size: 1.125rem;
+    font-size: 1.25rem; /* Ajustado */
   }
 
   .nav-link.active::after {
@@ -575,11 +784,15 @@ img {
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 2.25rem; /* Ajustado */
   }
 
   .section-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.2rem; /* Ajustado */
+  }
+
+  body {
+    font-size: 17px; /* Ligeiramente menor em mobile */
   }
 }
 
@@ -626,4 +839,45 @@ img {
 
 [data-aos="zoom-in"].aos-animate {
   transform: scale(1);
+}
+
+/* Animação de carregamento suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Melhor indicador de loading */
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.loading::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
