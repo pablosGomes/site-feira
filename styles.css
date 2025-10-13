@@ -3,16 +3,16 @@
    =================================== */
 
 :root {
-  /* Light Theme Colors - Paleta expandida de azuis */
-  --color-primary: #1e3a8a; /* Azul escuro profundo */
-  --color-primary-dark: #1e293b; /* Azul slate escuro */
-  --color-primary-medium: #2563eb; /* Azul royal médio */
-  --color-primary-light: #dbeafe; /* Azul claro suave */
-  --color-secondary: #0f172a; /* Azul escuro secundário */
-  --color-accent: #3b82f6; /* Azul vibrante para acentos */
-  --color-accent-light: #60a5fa; /* Azul claro vibrante */
+  /* Simplificando paleta para tons de azul apenas */
+  --color-primary: #1e3a8a;
+  --color-primary-dark: #1e40af;
+  --color-primary-medium: #2563eb;
+  --color-primary-light: #dbeafe;
+  --color-secondary: #0f172a;
+  --color-accent: #3b82f6;
+  --color-accent-light: #60a5fa;
 
-  /* Adicionando mais tons de azul para riqueza visual */
+  /* Tons de azul - paleta completa */
   --color-blue-50: #eff6ff;
   --color-blue-100: #dbeafe;
   --color-blue-200: #bfdbfe;
@@ -25,11 +25,11 @@
   --color-blue-900: #1e3a8a;
   --color-blue-950: #172554;
 
-  /* Melhorando contraste no modo claro - texto escuro em fundo claro */
+  /* Cores neutras para contraste */
   --color-bg: #ffffff;
   --color-bg-secondary: #f8fafc;
-  --color-text: #0f172a; /* Texto principal escuro */
-  --color-text-secondary: #475569; /* Texto secundário escuro com bom contraste */
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
   --color-border: #cbd5e1;
 
   /* Typography */
@@ -61,19 +61,19 @@
   --transition-slow: 0.5s ease;
 }
 
-/* Modo escuro com azul escuro e alto contraste */
+/* Modo escuro com azuis escuros e alto contraste */
 [data-theme="dark"] {
-  --color-bg: #0f172a; /* Azul slate muito escuro */
-  --color-bg-secondary: #1e293b; /* Azul slate escuro */
-  --color-text: #f1f5f9; /* Texto muito claro para alto contraste */
-  --color-text-secondary: #cbd5e1; /* Texto secundário claro */
+  --color-bg: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
   --color-border: #334155;
-  --color-primary: #60a5fa; /* Azul claro vibrante como primário */
+  --color-primary: #60a5fa;
   --color-primary-light: rgba(96, 165, 250, 0.15);
-  --color-accent: #93c5fd; /* Azul ainda mais claro para acentos */
+  --color-accent: #93c5fd;
   --color-accent-light: #bfdbfe;
 
-  /* Sobrescrevendo tons de azul para modo escuro */
+  /* Invertendo tons de azul para modo escuro */
   --color-blue-50: #172554;
   --color-blue-100: #1e3a8a;
   --color-blue-200: #1e40af;
