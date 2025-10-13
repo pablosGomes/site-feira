@@ -3,23 +3,38 @@
    =================================== */
 
 :root {
-  /* Light Theme Colors - Tons de azul mais escuros e profundos */
+  /* Light Theme Colors - Paleta expandida de azuis */
   --color-primary: #1e3a8a; /* Azul escuro profundo */
-  --color-primary-dark: #0f172a; /* Azul quase preto */
+  --color-primary-dark: #1e293b; /* Azul slate escuro */
+  --color-primary-medium: #2563eb; /* Azul royal médio */
   --color-primary-light: #dbeafe; /* Azul claro suave */
   --color-secondary: #0f172a; /* Azul escuro secundário */
-  --color-accent: #2563eb; /* Azul médio para acentos */
+  --color-accent: #3b82f6; /* Azul vibrante para acentos */
+  --color-accent-light: #60a5fa; /* Azul claro vibrante */
+
+  /* Adicionando mais tons de azul para riqueza visual */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #172554;
 
   --color-bg: #ffffff;
   --color-bg-secondary: #f8fafc;
-  --color-text: #0f172a; /* Texto mais escuro para melhor contraste */
-  --color-text-secondary: #334155; /* Texto secundário mais escuro */
+  --color-text: #0f172a;
+  --color-text-secondary: #334155;
   --color-border: #cbd5e1;
 
-  /* Typography - Fontes mais elegantes para tema sério */
-  --font-primary: "Crimson Text", "Georgia", serif; /* Serif elegante para corpo */
-  --font-display: "Cormorant Garamond", "Playfair Display", serif; /* Serif dramática para títulos */
-  --font-accent: "Lora", serif; /* Serif alternativa */
+  /* Typography */
+  --font-primary: "Crimson Text", "Georgia", serif;
+  --font-display: "Cormorant Garamond", "Playfair Display", serif;
+  --font-accent: "Lora", serif;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -35,9 +50,9 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --shadow-sm: 0 2px 8px rgba(30, 58, 138, 0.08);
+  --shadow-md: 0 4px 16px rgba(30, 58, 138, 0.12);
+  --shadow-lg: 0 8px 32px rgba(30, 58, 138, 0.16);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -45,15 +60,30 @@
   --transition-slow: 0.5s ease;
 }
 
-/* Dark Theme Colors */
+/* Melhorando drasticamente o contraste no modo escuro */
 [data-theme="dark"] {
-  --color-bg: #020617;
-  --color-bg-secondary: #0f172a;
-  --color-text: #f8fafc; /* Texto mais claro para melhor contraste */
-  --color-text-secondary: #cbd5e1; /* Texto secundário mais claro */
+  --color-bg: #0f172a; /* Azul slate muito escuro */
+  --color-bg-secondary: #1e293b; /* Azul slate escuro */
+  --color-text: #f1f5f9; /* Texto muito claro para alto contraste */
+  --color-text-secondary: #e2e8f0; /* Texto secundário claro */
   --color-border: #334155;
-  --color-primary-light: rgba(30, 58, 138, 0.25);
-  --color-accent: #60a5fa;
+  --color-primary: #60a5fa; /* Azul claro vibrante como primário */
+  --color-primary-light: rgba(96, 165, 250, 0.15);
+  --color-accent: #93c5fd; /* Azul ainda mais claro para acentos */
+  --color-accent-light: #bfdbfe;
+
+  /* Sobrescrevendo tons de azul para modo escuro */
+  --color-blue-50: #172554;
+  --color-blue-100: #1e3a8a;
+  --color-blue-200: #1e40af;
+  --color-blue-300: #1d4ed8;
+  --color-blue-400: #2563eb;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #60a5fa;
+  --color-blue-700: #93c5fd;
+  --color-blue-800: #bfdbfe;
+  --color-blue-900: #dbeafe;
+  --color-blue-950: #eff6ff;
 }
 
 /* ===================================
@@ -153,18 +183,30 @@ figcaption {
    =================================== */
 
 .navbar {
-  padding: 1.25rem 0; /* Mais espaço vertical */
+  padding: 1.25rem 0;
   transition: all var(--transition-base);
   background-color: var(--color-bg) !important;
+  /* Adicionando borda sutil com tom de azul */
+  border-bottom: 1px solid transparent;
+}
+
+[data-theme="dark"] .navbar {
+  border-bottom-color: var(--color-blue-800);
 }
 
 .navbar.scrolled {
   box-shadow: var(--shadow-sm);
+  /* Adicionando borda azul ao rolar */
+  border-bottom-color: var(--color-blue-200);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+  border-bottom-color: var(--color-blue-700);
 }
 
 .navbar-brand {
   font-family: var(--font-display);
-  font-size: 1.75rem; /* Maior e mais imponente */
+  font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--color-text);
@@ -178,24 +220,29 @@ figcaption {
 .brand-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  /* Usando gradiente de azuis mais vibrante */
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-blue-800));
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.25rem;
-  /* Micro-interação no ícone */
   transition: transform var(--transition-base);
+}
+
+[data-theme="dark"] .brand-icon {
+  background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-700));
 }
 
 .navbar-brand:hover .brand-icon {
   transform: rotate(10deg) scale(1.1);
 }
 
+/* Melhorando drasticamente o contraste dos links no modo escuro */
 .nav-link {
   font-weight: 500;
-  font-size: 1.05rem; /* Ligeiramente maior */
+  font-size: 1.05rem;
   letter-spacing: 0.01em;
   color: var(--color-text-secondary);
   padding: 0.5rem 1rem !important;
@@ -203,9 +250,18 @@ figcaption {
   transition: color var(--transition-fast);
 }
 
+[data-theme="dark"] .nav-link {
+  color: var(--color-blue-300); /* Azul claro muito visível */
+}
+
 .nav-link:hover,
 .nav-link.active {
   color: var(--color-primary);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--color-blue-100); /* Azul muito claro ao hover */
 }
 
 .nav-link.active::after {
@@ -232,6 +288,11 @@ figcaption {
   cursor: pointer;
 }
 
+[data-theme="dark"] .btn-icon {
+  border-color: var(--color-blue-700);
+  color: var(--color-blue-300);
+}
+
 .btn-icon:hover {
   background-color: var(--color-primary-light);
   border-color: var(--color-primary);
@@ -245,32 +306,32 @@ figcaption {
 
 .hero-section {
   padding-top: 80px;
-  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+  /* Usando gradiente de azuis mais rico */
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-blue-50) 50%, var(--color-blue-100) 100%);
   position: relative;
+}
+
+[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-blue-950) 50%, var(--color-blue-900) 100%);
 }
 
 .hero-icon {
   width: 60px;
   height: 60px;
-  background: var(--color-primary-light);
+  /* Usando tom de azul mais vibrante */
+  background: linear-gradient(135deg, var(--color-blue-100), var(--color-blue-200));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary);
+  color: var(--color-blue-700);
   font-size: 1.75rem;
-  /* Animação sutil no ícone */
   animation: float 3s ease-in-out infinite;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+[data-theme="dark"] .hero-icon {
+  background: linear-gradient(135deg, var(--color-blue-800), var(--color-blue-700));
+  color: var(--color-blue-200);
 }
 
 .hero-title {
@@ -283,7 +344,6 @@ figcaption {
 
 .hero-title .text-primary {
   color: var(--color-primary);
-  /* Efeito de destaque no texto */
   position: relative;
   display: inline-block;
 }
@@ -295,8 +355,13 @@ figcaption {
   left: 0;
   width: 100%;
   height: 8px;
-  background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
+  /* Usando gradiente de azuis */
+  background: linear-gradient(90deg, transparent, var(--color-blue-300), transparent);
   z-index: -1;
+}
+
+[data-theme="dark"] .hero-title .text-primary::after {
+  background: linear-gradient(90deg, transparent, var(--color-blue-700), transparent);
 }
 
 .hero-subtitle {
@@ -360,18 +425,19 @@ figcaption {
 
 /* Quote Card */
 .quote-card {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, rgba(30, 58, 138, 0.08) 100%); /* Gradiente com nova cor */
+  /* Usando gradiente de azuis mais rico */
+  background: linear-gradient(135deg, var(--color-blue-100) 0%, var(--color-blue-50) 100%);
   border-radius: var(--radius-lg);
   padding: 3rem;
   position: relative;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-blue-200);
 }
 
 [data-theme="dark"] .quote-card {
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 58, 138, 0.1) 100%);
-  border-color: var(--color-border);
+  background: linear-gradient(135deg, var(--color-blue-900) 0%, var(--color-blue-950) 100%);
+  border-color: var(--color-blue-800);
 }
 
 .quote-card::before {
@@ -380,7 +446,8 @@ figcaption {
   inset: 0;
   border-radius: var(--radius-lg);
   padding: 2px;
-  background: linear-gradient(135deg, var(--color-primary), transparent);
+  /* Gradiente de azuis no hover */
+  background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-700));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -399,9 +466,13 @@ figcaption {
 
 .quote-icon {
   font-size: 4rem;
-  color: var(--color-primary);
+  color: var(--color-blue-600);
   opacity: 0.3;
   margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .quote-icon {
+  color: var(--color-blue-400);
 }
 
 .quote-text {
@@ -487,14 +558,20 @@ figcaption {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  /* Usando gradiente de azuis mais vibrante */
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-blue-800));
   color: white;
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+[data-theme="dark"] .btn-primary {
+  background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-700));
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.5);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
   color: white;
 }
 
@@ -519,6 +596,7 @@ figcaption {
 [data-theme="dark"] .btn-light:hover {
   background-color: var(--color-primary);
   color: white;
+  transform: translateY(-2px);
 }
 
 /* ===================================
@@ -527,6 +605,11 @@ figcaption {
 
 .about-section {
   background-color: var(--color-bg);
+}
+
+[data-theme="dark"] .about-section {
+  /* Adicionando tom de azul sutil */
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-blue-950) 100%);
 }
 
 .section-title {
@@ -559,7 +642,7 @@ figcaption {
 
 [data-theme="dark"] .feature-card {
   background-color: var(--color-bg-secondary);
-  border-color: var(--color-border);
+  border-color: var(--color-blue-800);
 }
 
 .feature-card:hover {
@@ -571,15 +654,21 @@ figcaption {
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: var(--color-primary-light);
+  /* Usando gradiente de azuis */
+  background: linear-gradient(135deg, var(--color-blue-100), var(--color-blue-200));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  color: var(--color-primary);
+  color: var(--color-blue-700);
   font-size: 2rem;
   transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .feature-icon {
+  background: linear-gradient(135deg, var(--color-blue-800), var(--color-blue-700));
+  color: var(--color-blue-200);
 }
 
 .feature-card:hover .feature-icon {
@@ -602,7 +691,12 @@ figcaption {
 
 /* Nova seção: Why Section */
 .why-section {
-  background-color: var(--color-bg-secondary);
+  /* Usando tom de azul no fundo */
+  background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-blue-50) 100%);
+}
+
+[data-theme="dark"] .why-section {
+  background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-blue-950) 100%);
 }
 
 .insight-list {
@@ -620,28 +714,34 @@ figcaption {
 }
 
 .insight-card {
-  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-primary-light) 100%);
+  /* Usando gradiente de azuis mais rico */
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-blue-100) 100%);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-blue-200);
 }
 
 [data-theme="dark"] .insight-card {
-  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(30, 58, 138, 0.2) 100%);
-  border-color: var(--color-border);
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-blue-900) 100%);
+  border-color: var(--color-blue-800);
 }
 
 .insight-icon {
   width: 60px;
   height: 60px;
-  background: var(--color-primary);
+  /* Usando gradiente de azuis */
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-blue-700));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.75rem;
+}
+
+[data-theme="dark"] .insight-icon {
+  background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-600));
 }
 
 .insight-question {
@@ -667,34 +767,15 @@ figcaption {
    =================================== */
 
 .cta-section {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  /* Usando gradiente de azuis mais vibrante */
+  background: linear-gradient(135deg, var(--color-blue-700), var(--color-blue-900));
   color: white;
   position: relative;
   overflow: hidden;
 }
 
-/* Padrão de fundo animado */
-.cta-section::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
+[data-theme="dark"] .cta-section {
+  background: linear-gradient(135deg, var(--color-blue-800), var(--color-blue-950));
 }
 
 .cta-title {
@@ -715,13 +796,14 @@ figcaption {
    =================================== */
 
 .footer {
-  background-color: var(--color-bg-secondary);
+  /* Adicionando tom de azul sutil */
+  background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-blue-50) 100%);
   border-top: 1px solid var(--color-border);
 }
 
 [data-theme="dark"] .footer {
-  background-color: var(--color-bg);
-  border-top-color: var(--color-border);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-blue-950) 100%);
+  border-top-color: var(--color-blue-800);
 }
 
 .footer-brand {
@@ -790,7 +872,8 @@ figcaption {
 }
 
 .social-link:hover {
-  background-color: var(--color-primary);
+  /* Usando cor primária (azul) no hover */
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-blue-700));
   border-color: var(--color-primary);
   color: white;
   transform: translateY(-3px) rotate(5deg);
@@ -813,7 +896,11 @@ figcaption {
   font-style: italic;
   margin-top: 0.5rem;
   padding-left: 1rem;
-  border-left: 2px solid var(--color-primary);
+  border-left: 2px solid var(--color-blue-500);
+}
+
+[data-theme="dark"] .reference {
+  border-left-color: var(--color-blue-600);
 }
 
 .reference-list {
@@ -834,8 +921,12 @@ figcaption {
   content: "[" counter(list-item) "]";
   position: absolute;
   left: 0;
-  color: var(--color-primary);
+  color: var(--color-blue-600);
   font-weight: 600;
+}
+
+[data-theme="dark"] .reference-list li::before {
+  color: var(--color-blue-400);
 }
 
 /* ===================================
