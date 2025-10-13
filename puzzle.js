@@ -7,7 +7,7 @@ class PuzzleGame {
     this.moves = 0
     this.startTime = null
     this.timerInterval = null
-    this.imageUrl = "/capa-do-livro-filhos-do-quarto-com-design-azul.jpg"
+    this.imageUrl = "/public/capa-filhos-do-quarto.webp"
 
     this.init()
   }
