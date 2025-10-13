@@ -3,62 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a equipe por trás do projeto Filhos do Quarto">
+    <title>Sobre o Projeto - Filhos do Quarto</title>
     
-    <!-- SEO aprimorado com meta tags completas -->
-    <meta name="description" content="Filhos do Quarto: Uma jornada literária transformadora de autoconhecimento. Explore os mistérios da psique humana através de uma narrativa envolvente baseada em psicologia junguiana.">
-    <meta name="keywords" content="autoconhecimento, psicologia junguiana, desenvolvimento pessoal, romance psicológico, transformação pessoal, jornada interior">
-    <meta name="author" content="Filhos do Quarto">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://filhosdoquarto.com/">
-    <meta property="og:title" content="Filhos do Quarto - Uma Jornada de Autoconhecimento">
-    <meta property="og:description" content="Uma experiência literária transformadora que convida você a explorar os mistérios da psique humana e descobrir quem você realmente é.">
-    <meta property="og:image" content="/placeholder.svg?height=630&width=1200">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://filhosdoquarto.com/">
-    <meta property="twitter:title" content="Filhos do Quarto - Uma Jornada de Autoconhecimento">
-    <meta property="twitter:description" content="Uma experiência literária transformadora que convida você a explorar os mistérios da psique humana.">
-    <meta property="twitter:image" content="/placeholder.svg?height=630&width=1200">
-    
-    <title>Filhos do Quarto - Uma Jornada de Autoconhecimento</title>
-    
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 <body data-theme="light">
     
-    <!-- Navegação com acessibilidade aprimorada -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav" role="navigation" aria-label="Navegação principal">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Filhos do Quarto - Página inicial">
-                <div class="brand-icon" aria-hidden="true">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="brand-icon">
                     <i class="bi bi-book"></i>
                 </div>
                 <span class="ms-2">Filhos do Quarto</span>
             </a>
             
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html" aria-current="page">O Chamado</a>
+                        <a class="nav-link" href="index.html">O Chamado</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="o-quarto.html">O Quarto</a>
@@ -72,9 +47,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="conexao.html">Conexão</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre-projeto.html">Sobre o Projeto</a>
+                    </li>
                     <li class="nav-item ms-lg-3">
-                        <button class="btn btn-icon" id="themeToggle" aria-label="Alternar entre modo claro e escuro" title="Alternar tema">
-                            <i class="bi bi-moon-fill" aria-hidden="true"></i>
+                        <button class="btn btn-icon" id="themeToggle" aria-label="Alternar modo escuro">
+                            <i class="bi bi-moon-fill"></i>
                         </button>
                     </li>
                 </ul>
@@ -82,195 +60,138 @@
         </div>
     </nav>
 
-    <!-- Hero Section com conteúdo mais profundo e poético -->
-    <section class="hero-section" id="hero">
+    <section class="page-header">
         <div class="container">
-            <div class="row align-items-center min-vh-100 py-5">
-                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                    
-                    <h1 class="hero-title mb-4">
-                        Filhos do <span class="text-primary">Quarto</span>
-                    </h1>
-                    
-                    <p class="hero-subtitle mb-4">
-                        Uma jornada que ilumina o quarto interior onde guardamos nossos medos, traumas e angústias, transformando escuridão em luz pessoal.
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h1 class="page-title mb-4">Auto Conhecimento</h1>
+                    <p class="page-subtitle">
+                        Conheça o autoconhecimento e seus benefícios
                     </p>
-                    
-                    <ul class="feature-list mb-5">
-                        <li>
-                            <i class="bi bi-circle-fill" aria-hidden="true"></i>
-                            <span>Sobre cura emocional e autoconfiança</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-circle-fill" aria-hidden="true"></i>
-                            <span>Transforme angústia em força, medo em coragem</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-circle-fill" aria-hidden="true"></i>
-                            <span>Descubra o caminho para uma vida plena e com paz</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="hero-cta">
-                        <a href="o-quarto.html" class="btn btn-primary btn-lg me-3 mb-3">
-                            <i class="bi bi-book-half me-2"></i>
-                            Descobrir a Obra
-                        </a>
-                        <a href="descubra-se.html" class="btn btn-outline-primary btn-lg mb-3">
-                            <i class="bi bi-compass me-2"></i>
-                            Fazer Quiz
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6" data-aos="fade-left">
-                    <figure>
-                        <img src="/public/capa-filhos-do-quarto.webp" 
-                             alt="Capa do Livro Filhos do Quarto" 
-                             class="img-fluid rounded shadow-lg"
-                             style="max-width: 100%; height: auto;">
-                        <figcaption>Elisabete Baptista - Editora Suinara, 2022</figcaption>
-                    </figure>
                 </div>
             </div>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator" aria-hidden="true">
-            <div class="scroll-line"></div>
-        </div>
     </section>
 
-    <!-- Nova seção sobre o livro com mais profundidade -->
-    <section class="about-book-section py-5" style="background-color: var(--color-bg-secondary);">
+    
+    <section class="py-5">
         <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="text-center mb-5" data-aos="fade-up">
-                        <h2 class="section-title mb-4">Sobre o Livro</h2>
-                        <p class="section-subtitle">
-                            Uma obra que ilumina o quarto interior onde guardamos nossas feridas emocionais
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <div class="story-card">
+                        <h2 class="mb-4">O que é Auto Conhecimento?</h2>
+                        <p class="lead mb-4">
+                            <em>Filhos do Quarto</em> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aliquid, tempora, accusantium quasi, itaque odio ipsa ad dolorum pariatur quaerat vel dolor aut soluta ab sunt quisquam nobis molestiae accusamus!
+                        </p>
+                        <p class="mb-4">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facilis iure deleniti earum sapiente! Architecto voluptas modi veritatis eveniet obcaecati nulla impedit quidem ab molestias. Saepe voluptatum laborum reprehenderit in!
+                        </p>
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, amet. Nam atque adipisci quo harum. Libero ullam nemo expedita molestias eos corrupti vel quidem aliquid facilis cupiditate, deserunt hic id?
                         </p>
                     </div>
-                    
-                    <div class="row g-5 align-items-center mb-5">
-                        <div class="col-lg-6" data-aos="fade-right">
-                            <figure>
-                                <img src="/public/capa-filhos-do-quarto.webp" 
-                                     alt="Capa do Livro Filhos do Quarto" 
-                                     class="img-fluid rounded shadow"
-                                     style="max-width: 100%; height: auto;">
-                                <figcaption>Elisabete Baptista, autora de "Filhos do Quarto"</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-lg-6" data-aos="fade-left">
-                            <h3 class="mb-4" style="font-size: 2rem; font-weight: 600;">A Autora e a Obra</h3>
-                            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                                <strong>Elisabete Baptista</strong> nos convida a refletir sobre o quarto interior onde guardamos nossos medos, traumas e angústias. Este espaço, que pode ser um refúgio momentâneo em tempos de dor, torna-se uma prisão quando permanecemos nele por muito tempo.
-                            </p>
-                            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                                O livro aborda questões profundas: como enfrentar perdas, traumas e experiências que nos abalam? Como lidar com feridas invisíveis que marcam nossa alma? A obra propõe iluminar esse quarto escuro e despertar em cada um a vontade de viver com plenitude, paz e amor.
-                            </p>
-                            <div class="reference">
-                                Baptista, Elisabete. <em>Filhos do Quarto</em>. Editora Suinara, 2022. 112 páginas. ISBN: 978-6584690073
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+
+           
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <h2 class="text-center mb-5" data-aos="fade-up">Importância</h2>
                     
                     <div class="row g-4">
                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <div style="background: var(--color-bg); border-radius: 1rem; padding: 2rem; height: 100%; border: 1px solid var(--color-border); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                                <div style="width: 60px; height: 60px; background: var(--color-primary-light); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-                                    <i class="bi bi-heart" style="font-size: 1.75rem; color: var(--color-primary);"></i>
+                            <div class="team-card">
+                                <div class="team-avatar">
+                                    <i class="bi bi-person-circle"></i>
                                 </div>
-                                <h4 style="font-size: 1.35rem; font-weight: 600; margin-bottom: 1rem;">Autoconfiança e Autoestima</h4>
-                                <p style="color: var(--color-text-secondary); line-height: 1.7; font-size: 1.05rem;">
-                                    O livro fortalece sua voz interior e ajuda a construir uma confiança que não depende da aprovação externa. Você aprende que tem valor e é capaz.
+                                <p class="team-bio">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quam quisquam. Quis obcaecati, explicabo quas odio ipsum voluptate maxime delectus, at labore sit culpa tenetur libero. Cumque incidunt doloribus nihil.
                                 </p>
                             </div>
                         </div>
+                        
                         <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                            <div style="background: var(--color-bg); border-radius: 1rem; padding: 2rem; height: 100%; border: 1px solid var(--color-border); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                                <div style="width: 60px; height: 60px; background: var(--color-primary-light); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-                                    <i class="bi bi-lightbulb" style="font-size: 1.75rem; color: var(--color-primary);"></i>
+                            <div class="team-card">
+                                <div class="team-avatar">
+                                    <i class="bi bi-person-circle"></i>
                                 </div>
-                                <h4 style="font-size: 1.35rem; font-weight: 600; margin-bottom: 1rem;">Transformação Emocional</h4>
-                                <p style="color: var(--color-text-secondary); line-height: 1.7; font-size: 1.05rem;">
-                                    Aprenda a transformar angústia em força, medo em coragem, e escuridão em luz pessoal. Saia do quarto emocional e pise forte no seu valor.
+                                
+                                <p class="team-bio">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum cum tempore at ipsam excepturi animi! Repellendus accusantium exercitationem quidem, pariatur ducimus voluptas dicta ut suscipit asperiores, itaque unde qui dolore!
                                 </p>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
-    <!-- About Section com reflexões mais profundas -->
-    <section class="about-section py-5" id="about">
+    <section class="py-5">
         <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="text-center mb-5" data-aos="fade-up">
-                        <h2 class="section-title mb-4">O Quarto Interior</h2>
-                        <p class="section-subtitle">
-                            Entenda a metáfora do quarto como o espaço onde guardamos nossas feridas emocionais
-                        </p>
-                    </div>
-                    
-                    <div class="row g-4">
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="feature-card text-center">
-                                <div class="feature-icon">
-                                    <i class="bi bi-door-closed"></i>
-                                </div>
-                                <h3 class="feature-title">O Refúgio</h3>
-                                <p class="feature-description">
-                                    O quarto pode ser um refúgio momentâneo em tempos de tristeza e dor, um lugar seguro para processar emoções difíceis
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <div class="journey-stage mb-5" id="stage-1" data-aos="fade-up">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <h2 class="stage-title mb-4">Definição</h2>
+                                <p class="stage-description mb-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ipsa itaque, optio atque temporibus enim, facilis voluptatum deserunt modi aut accusamus eligendi ipsam quo cumque deleniti? Dolorum consequuntur laudantium iusto.
+                                </p>
+                                <p class="stage-description mb-4">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ab expedita repellat possimus ratione quisquam nisi delectus fugiat asperiores obcaecati molestiae saepe inventore adipisci facere animi hic itaque? Quis, quod.</em> 
                                 </p>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="feature-card text-center">
-                                <div class="feature-icon">
-                                    <i class="bi bi-exclamation-triangle"></i>
+                            <div class="col-lg-6">
+                                <div class="stage-card">
+                                    <div class="stage-icon">
+                                        <i class="bi bi-sunrise"></i>
+                                    </div>
+                                    <h4 class="mb-3">Sinais do Auto Conhecimento</h4>
+                                    <ul class="stage-list">
+                                        <li>Sensação de que algo precisa mudar</li>
+                                        <li>Questionamento de crenças antigas</li>
+                                        <li>Curiosidade sobre quem você realmente é</li>
+                                        <li>Desconforto com padrões repetitivos</li>
+                                        <li>Busca por significado mais profundo</li>
+                                    </ul>
+                                    
                                 </div>
-                                <h3 class="feature-title">O Perigo</h3>
-                                <p class="feature-description">
-                                    Mas se permanecemos nele por muito tempo, escondendo problemas e medos, podemos ser sugados pela escuridão emocional
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="feature-card text-center">
-                                <div class="feature-icon">
-                                    <i class="bi bi-lightbulb"></i>
-                                </div>
-                                <h3 class="feature-title">A Luz</h3>
-                                <p class="feature-description">
-                                    Este livro traz luz para esse quarto interior, despertando a vontade de viver com plenitude, paz e amor
-                                </p>
                             </div>
                         </div>
                     </div>
+        
+                    <hr class="stage-divider" data-aos="fade">
+        
                 </div>
             </div>
-        </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section py-5">
+     
+    <section class="py-5" style="background-color: var(--color-bg-secondary);">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center" data-aos="zoom-in">
-                    <h2 class="cta-title mb-4">Você está cansado de se sentir invisível?</h2>
-                    <p class="cta-text mb-5">
-                        De duvidar de si mesmo, de esconder quem é? Esta leitura pode ser o empurrão que você precisava para deixar o quarto e pisar forte no seu valor.
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="mb-4">Agradecimentos</h2>
+                    <p class="mb-4" style="font-size: 1.15rem; line-height: 1.8; color: var(--color-text-secondary);">
+                        Este projeto não seria possível sem o apoio de diversas instituições e pessoas que acreditaram na importância de democratizar o autoconhecimento. Agradecemos especialmente à Universidade, ao Departamento de Psicologia, ao Programa de Pós-Graduação em Literatura, e a todos os voluntários que participaram dos testes e ofereceram feedback valioso.
                     </p>
-                    <a href="descubra-se.html" class="btn btn-light btn-lg">
-                        Fazer o Quiz Agora
+                    <p style="font-size: 1.15rem; line-height: 1.8; color: var(--color-text-secondary);">
+                        Agradecemos também a você, leitor, por embarcar nesta jornada conosco. Que este projeto seja um farol em sua busca por autoconhecimento e autenticidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="mb-4">Saiba sobre o livro</h2>
+                    <p class="mb-4" style="font-size: 1.15rem;">Conheça sobre o livro</p>
+                    <a href="o-quarto.html" class="btn btn-primary btn-lg">
+                        Saber mais
                         <i class="bi bi-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -278,7 +199,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+     
     <footer class="footer py-5">
         <div class="container">
             <div class="row">
@@ -335,14 +256,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
