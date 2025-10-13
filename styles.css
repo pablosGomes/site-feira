@@ -5,16 +5,16 @@
 :root {
   /* Light Theme Colors - Tons de azul mais escuros e profundos */
   --color-primary: #1e3a8a; /* Azul escuro profundo */
-  --color-primary-dark: #1e293b; /* Azul quase preto */
+  --color-primary-dark: #0f172a; /* Azul quase preto */
   --color-primary-light: #dbeafe; /* Azul claro suave */
   --color-secondary: #0f172a; /* Azul escuro secundário */
-  --color-accent: #3b82f6; /* Azul médio para acentos */
+  --color-accent: #2563eb; /* Azul médio para acentos */
 
   --color-bg: #ffffff;
   --color-bg-secondary: #f8fafc;
-  --color-text: #0f172a;
-  --color-text-secondary: #475569;
-  --color-border: #e2e8f0;
+  --color-text: #0f172a; /* Texto mais escuro para melhor contraste */
+  --color-text-secondary: #334155; /* Texto secundário mais escuro */
+  --color-border: #cbd5e1;
 
   /* Typography - Fontes mais elegantes para tema sério */
   --font-primary: "Crimson Text", "Georgia", serif; /* Serif elegante para corpo */
@@ -49,10 +49,11 @@
 [data-theme="dark"] {
   --color-bg: #020617;
   --color-bg-secondary: #0f172a;
-  --color-text: #f1f5f9;
-  --color-text-secondary: #94a3b8;
-  --color-border: #1e293b;
-  --color-primary-light: rgba(30, 58, 138, 0.2);
+  --color-text: #f8fafc; /* Texto mais claro para melhor contraste */
+  --color-text-secondary: #cbd5e1; /* Texto secundário mais claro */
+  --color-border: #334155;
+  --color-primary-light: rgba(30, 58, 138, 0.25);
+  --color-accent: #60a5fa;
 }
 
 /* ===================================
@@ -112,6 +113,39 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Adicionando estilos para imagens e figuras */
+figure {
+  margin: 2rem 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  text-align: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-bg-secondary));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  border: 2px dashed var(--color-border);
 }
 
 /* ===================================
@@ -326,14 +360,18 @@ img {
 
 /* Quote Card */
 .quote-card {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, rgba(30, 58, 138, 0.05) 100%); /* Gradiente com nova cor */
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, rgba(30, 58, 138, 0.08) 100%); /* Gradiente com nova cor */
   border-radius: var(--radius-lg);
   padding: 3rem;
   position: relative;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
-  /* Borda sutil animada */
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .quote-card {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 58, 138, 0.1) 100%);
+  border-color: var(--color-border);
 }
 
 .quote-card::before {
@@ -451,12 +489,12 @@ img {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: white;
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.5);
   color: white;
 }
 
@@ -472,16 +510,15 @@ img {
   transform: translateY(-2px);
 }
 
-.btn-light {
-  background-color: white;
-  color: var(--color-primary);
-  box-shadow: var(--shadow-md);
+[data-theme="dark"] .btn-light {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
 }
 
-.btn-light:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  color: var(--color-primary);
+[data-theme="dark"] .btn-light:hover {
+  background-color: var(--color-primary);
+  color: white;
 }
 
 /* ===================================
@@ -517,11 +554,17 @@ img {
   border: 1px solid var(--color-border);
   transition: all var(--transition-base);
   height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .feature-card {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
 }
 
@@ -582,6 +625,11 @@ img {
   padding: 2.5rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .insight-card {
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(30, 58, 138, 0.2) 100%);
+  border-color: var(--color-border);
 }
 
 .insight-icon {
@@ -671,6 +719,11 @@ img {
   border-top: 1px solid var(--color-border);
 }
 
+[data-theme="dark"] .footer {
+  background-color: var(--color-bg);
+  border-top-color: var(--color-border);
+}
+
 .footer-brand {
   font-family: var(--font-display);
   font-size: 1.65rem; /* Maior */
@@ -731,6 +784,11 @@ img {
   transition: all var(--transition-fast);
 }
 
+[data-theme="dark"] .social-link {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+}
+
 .social-link:hover {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
@@ -746,6 +804,38 @@ img {
 .footer-copyright {
   color: var(--color-text-secondary);
   font-size: 0.875rem;
+}
+
+/* Estilos para citações e referências */
+.reference {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-primary);
+}
+
+.reference-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.reference-list li {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.reference-list li::before {
+  content: "[" counter(list-item) "]";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* ===================================
